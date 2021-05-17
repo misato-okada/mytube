@@ -44,7 +44,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                     <?php if ($errors) echo (createErrMsg($errors)) ?>
                 </li>
             </ul>
-
             <form action="" method="post">
                 <div class="input-area">
                     <label for="title">タイトル</label>
