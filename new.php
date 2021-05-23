@@ -44,14 +44,15 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                     <?php if ($errors) echo (createErrMsg($errors)) ?>
                 </li>
             </ul>
+
             <form action="" method="post">
                 <div class="input-area">
                     <label for="title">タイトル</label>
-                    <input type="text" id="title" name="title" value="<? echo h($title_value) ?>">
+                    <input type="text" id="title" name="title" value="<?= h($title_value) ?>">
                     <label for=" video_id">動画ID</label>
-                    <input type="text" id="video_id" name="video_id" value="<? echo h($id_value) ?>">
+                    <input type="text" id="video_id" name="video_id" value="<?= h($id_value) ?>">
                     <label for="review">レビュー</label>
-                    <input type="text" id="review" name="review" value="<? echo h($review_value) ?>">
+                    <input type="text" id="review" name="review" value="<?= h($review_value) ?>">
                 </div>
                 <div class="btn submit-btn">
                     <input type="submit" value="CREATE">
