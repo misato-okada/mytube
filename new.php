@@ -34,10 +34,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         <div class="form-area">
             <h2 class="sub-title">NEW</h2>
 
-            <div class="errors">
-                <?php if ($errors) echo (createErrMsg($errors)) ?>
-            </div>
-
+            <?php if ($errors) echo (createErrMsg($errors)) ?>
+            
             <form action="" method="post">
                 <div class="input-area">
                     <label for="title">タイトル</label>
