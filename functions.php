@@ -1,6 +1,5 @@
 <?php
 require_once __DIR__ . '/config.php';
-
 function connectDb()
 {
     try {
@@ -38,7 +37,7 @@ function insertValidate($title, $video_id, $review)
     return $errors;
 }
 
-function createNewReview($title, $video_id, $review)
+function createReview($title, $video_id, $review)
 {
     try {
         $dbh = connectDb();
@@ -69,5 +68,5 @@ $err_msg = "<ul class=\"errors\">\n";
 
     $err_msg .= "</ul>\n";
 
-return $err_msg;
+    return $err_msg;
 }

@@ -11,18 +11,13 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $title = filter_input(INPUT_POST, 'title');
     $video_id = filter_input(INPUT_POST, 'video_id');
     $review = filter_input(INPUT_POST, 'review');
-    $title_value = $_POST['title'];
-    $id_value = $_POST['video_id'];
-    $review_value = $_POST['review'];
-
-
 
     // バリデーション
     $errors = insertValidate($title, $video_id, $review);
 
     // エラーチェック
     if (empty($errors)) {
-        createNewReview($title, $video_id, $review);
+        createReview($title, $video_id, $review);
     }
 }
 
@@ -48,11 +43,11 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             <form action="" method="post">
                 <div class="input-area">
                     <label for="title">タイトル</label>
-                    <input type="text" id="title" name="title" value="<?= h($title_value) ?>">
+                    <input type="text" id="title" name="title" value="<?= h($title) ?>">
                     <label for=" video_id">動画ID</label>
-                    <input type="text" id="video_id" name="video_id" value="<?= h($id_value) ?>">
+                    <input type="text" id="video_id" name="video_id" value="<?= h($video_id) ?>">
                     <label for="review">レビュー</label>
-                    <input type="text" id="review" name="review" value="<?= h($review_value) ?>">
+                    <input type="text" id="review" name="review" value="<?= h($review) ?>">
                 </div>
                 <div class="btn submit-btn">
                     <input type="submit" value="CREATE">
