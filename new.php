@@ -34,11 +34,9 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         <div class="form-area">
             <h2 class="sub-title">NEW</h2>
 
-            <ul class="errors">
-                <li>
-                    <?php if ($errors) echo (createErrMsg($errors)) ?>
-                </li>
-            </ul>
+            <div class="errors">
+                <?php if ($errors) echo (createErrMsg($errors)) ?>
+            </div>
 
             <form action="" method="post">
                 <div class="input-area">

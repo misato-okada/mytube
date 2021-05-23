@@ -60,10 +60,10 @@ function createReview($title, $video_id, $review)
 
 function createErrMsg($errors)
 {
-$err_msg = "<ul class=\"errors\">\n";
+    $err_msg = "<ul class=\"errors\">\n";
 
     foreach ($errors as $error) {
-    $err_msg .= "<li>" . h($error) . "</li>\n";
+        $err_msg .= "<li>" . h($error) . "</li>\n";
     }
 
     $err_msg .= "</ul>\n";
