@@ -47,11 +47,11 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             <form action="" method="post">
                 <div class="input-area">
                     <label for="title">タイトル</label>
-                    <input type="text" id="title" name="title" value="<?php echo $title_value; ?>">
+                    <input type="text" id="title" name="title" value="<? echo h($title_value) ?>">
                     <label for=" video_id">動画ID</label>
-                    <input type="text" id="video_id" name="video_id" value="<?php echo $id_value; ?>">
+                    <input type="text" id="video_id" name="video_id" value="<? echo h($id_value) ?>">
                     <label for="review">レビュー</label>
-                    <input type="text" id="review" name="review" value="<?php echo $review_value; ?>">
+                    <input type="text" id="review" name="review" value="<? echo h($review_value) ?>">
                 </div>
                 <div class="btn submit-btn">
                     <input type="submit" value="CREATE">
