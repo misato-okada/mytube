@@ -44,7 +44,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                 <div class="input-area">
                     <label for="title">タイトル</label>
                     <input type="text" id="title" name="title" value="<?= h($title) ?>">
-                    <label for=" video_id">動画ID</label>
+                    <label for="video_id">動画ID</label>
                     <input type="text" id="video_id" name="video_id" value="<?= h($video_id) ?>">
                     <label for="review">レビュー</label>
                     <input type="text" id="review" name="review" value="<?= h($review) ?>">
