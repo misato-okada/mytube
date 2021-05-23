@@ -1,3 +1,13 @@
+<?php
+
+require_once __DIR__ . '/functions.php';
+
+
+?>
+<!DOCTYPE html>
+<html lang="ja">
+
+<?php include_once __DIR__ . '/_head.html' ?>
 
 <body>
     <div class="wrapper">
